@@ -1,2 +1,5 @@
 # Python-JoakimRoberg
-Python course for AI 2023
+
+## My First course
+
+Python course for **AI 2023**
