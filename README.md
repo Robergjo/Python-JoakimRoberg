@@ -10,6 +10,4 @@
 print("hej")
 print("tjabalaba")
 
-
-print("tjotjena")
 ````
