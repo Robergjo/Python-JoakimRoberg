@@ -2,7 +2,7 @@
 
 ## My First course
 
-Python course for **AI 2023**
+**Python** course for **AI 2023**
 
 ---
 
@@ -10,4 +10,6 @@ Python course for **AI 2023**
 print("hej")
 print("tjabalaba")
 
+
+print("tjotjena")
 ````
