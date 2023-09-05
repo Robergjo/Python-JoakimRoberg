@@ -7,7 +7,7 @@
 ---
 
 ```` 
-This repo will include exercises and work from my studies.
+This repo will include exercises, labs and other work from my studies at this course.
 
 ````
 ... 
