@@ -6,7 +6,7 @@
 
 ---
 
-````
+```` python
 print("hej")
 print("tjabalaba")
 
