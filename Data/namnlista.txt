@@ -1,1 +1,4 @@
-adam, AI23, adam@gmail.com
+adam
+eva
+stefan
+macke
