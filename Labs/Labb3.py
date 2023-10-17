@@ -40,3 +40,45 @@ class Geometric: # superklass
 
     def is_inside(self, point_x, point_y):
         pass
+
+class Rectangle(Geometric):                      # underklass
+    def __init__(self, x, y, side1, side2):
+        super().__init__(x, y)
+        self.side1 = side1
+        self.side2 = side2
+
+    @property
+    def area(self):
+        return self.side1 * self.side2
+
+    @property
+    def perimeter(self):
+        return 2 * (self.side1 + self.side2)
+
+    def is_square(self):
+        return self.side1 == self.side2
+
+    def __eq__(self, other):
+        if isinstance(other, Rectangle):
+            return (self.x, self.y, self.side1, self.side2) == (other.x, other.y, other.side1, other.side2)
+        return False
+    
+    def __lt__(self, other):
+        if isinstance(other, Rectangle):
+            return self.area < other.area
+        return False
+    
+    def is_inside(self, point_x, point_y):
+        half_width = self.side1 / 2
+        half_height = self.side2 / 2
+        x_min = self.x - half_width
+        x_max = self.x + half_width
+        y_min = self.y - half_height
+        y_max = self.y + half_height
+        return x_min <= point_x <= x_max and y_min <= point_y <= y_max
+
+
+class Circle(Geometric): #underklass
+    def __init__(self, x, y, radius):
+        super().__init__(x, y)
+        self.radius = radius
