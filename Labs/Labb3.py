@@ -82,3 +82,33 @@ class Circle(Geometric): #underklass
     def __init__(self, x, y, radius):
         super().__init__(x, y)
         self.radius = radius
+
+    @property
+    def area(self):
+        return math.pi * self.radius ** 2
+
+    @property
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
+    def is_unit_circle(self):
+        return self.radius == 1
+
+    def __eq__(self, other):
+        if isinstance(other, Circle):
+            return (self.x, self.y, self.radius) == (other.x, other.y, other.radius)
+        return False
+        
+    def __lt__(self, other):
+        if isinstance(other, Circle):
+            return self.area < other.area
+        return False
+    
+    def __gt__(self, other):
+        if isinstance(other, Circle):
+            return self.area > other.area
+        return False
+    
+    def is_inside(self, point_x, point_y):
+        distance = math.sqrt((point_x - self.x) ** 2 + (point_y - self.y) ** 2)
+        return distance <= self.radius
