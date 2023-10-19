@@ -38,15 +38,15 @@ rectangle2.translate(2, 2)
 circle1.translate(-1, -1)
 circle2.translate(5, 5)
 
-print("============================================")
 # Kontrollera om punkter ligger inuti figurer
+print("============================================")
 print("Point (2, 2) is inside Rectangle 1:", rectangle1.is_inside(2, 2))
 print("Point (1, 4) is inside Rectanglee 2:", rectangle2.is_inside(1, 4))
 print("Point (0, 0) is inside Circle 1:", circle1.is_inside(0, 0))
 print("Point (0.5, 0.5) is inside Circle 2:", circle2.is_inside(0.5, 0.5))
 
-print("============================================")
 # Kontrollera om det är en enhetscirkel eller kvadrat
+print("============================================")
 print("Circle 1 is a unit circle:", circle1.is_unit_circle())
 print("Rectangle 1 is a square:", rectangle1.is_square())
 

@@ -17,10 +17,14 @@ class Geometric: # superklass
         pass
 
     def __lt__(self, other):
-        pass
+        if isinstance(other, Rectangle):
+            return self.area < other.area
+        return False
 
     def __gt__(self, other):
-        pass
+        if isinstance(other, Circle):
+            return self.area > other.area
+        return False
 
     def __le__(self, other):
         pass
@@ -63,10 +67,6 @@ class Rectangle(Geometric):                      # underklass
             return (self.x, self.y, self.side1, self.side2) == (other.x, other.y, other.side1, other.side2)
         return False
     
-    def __lt__(self, other):
-        if isinstance(other, Rectangle):
-            return self.area < other.area
-        return False
     
     def is_inside(self, point_x, point_y):
         half_width = self.side1 / 2
@@ -99,16 +99,6 @@ class Circle(Geometric): #underklass
             return (self.x, self.y, self.radius) == (other.x, other.y, other.radius)
         return False
         
-    def __lt__(self, other):
-        if isinstance(other, Circle):
-            return self.area < other.area
-        return False
-    
-    def __gt__(self, other):
-        if isinstance(other, Circle):
-            return self.area > other.area
-        return False
-    
     def is_inside(self, point_x, point_y):
         distance = math.sqrt((point_x - self.x) ** 2 + (point_y - self.y) ** 2)
         return distance <= self.radius
