@@ -41,7 +41,7 @@ class Geometric: # superklass
     def is_inside(self, point_x, point_y):
         pass
 
-class Rectangle(Geometric):                      # underklass
+class Rectangle(Geometric): # underklass
     def __init__(self, x, y, side1, side2):
         super().__init__(x, y)
         self.side1 = side1
